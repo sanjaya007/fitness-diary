@@ -37,6 +37,59 @@
   </head>
 
   <body id="top">
+    <div class="modal-wrapper hidden" id="formModalWrapper">
+      <div class="modal-container">
+        <div class="modal-box">
+          <div class="form-modal" id="signupModal">
+            <div class="title">
+              <h1>Sign Up</h1>
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Full Name" />
+            </div>
+            <div class="input-box">
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Contact" />
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" />
+            </div>
+            <div class="note-box">
+              <a href="#" class="open-login-link">Already Sign Up ?</a>
+            </div>
+            <div class="btn-box">
+              <button class="open-login-link">Sign Up</button>
+            </div>
+          </div>
+          <div class="form-modal hidden" id="loginModal">
+            <div class="title">
+              <h1>Login</h1>
+            </div>
+            <div class="input-box">
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" />
+            </div>
+            <div class="note-box">
+              <a href="#" class="open-signup-link">Don't have account ?</a>
+            </div>
+            <div class="btn-box">
+              <a href="/tracker.html">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-wrapper hidden" id="modalWrapper">
+      <div class="modal-container" id="modalContainer">
+        <div class="modal-box" id="modalBox"></div>
+      </div>
+    </div>
+
     <!-- 
     - #HEADER
   -->
@@ -76,12 +129,14 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
+              <a href="#contact" class="navbar-link" data-nav-link
+                >Contact Us</a
+              >
             </li>
           </ul>
         </nav>
 
-        <a href="#" class="btn btn-secondary">Join Now</a>
+        <a href="#" class="btn btn-secondary get-started-btn">Join Now</a>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
           <span class="line"></span>
@@ -117,7 +172,9 @@
                 Incidunt neque nostrum est distinctio.
               </p>
 
-              <a href="#" class="btn btn-primary">Get Started</a>
+              <a href="#" class="btn btn-primary get-started-btn"
+                >Get Started</a
+              >
             </div>
 
             <div class="hero-banner">
@@ -267,7 +324,7 @@
                 <ion-icon name="play-sharp" aria-hidden="true"></ion-icon>
               </button>
 
-              <a href="#" class="btn-link has-before">Watch More</a>
+              <a href="/tracker.html" class="btn-link has-before">Watch More</a>
             </div>
           </div>
         </section>
@@ -627,6 +684,62 @@
             </ul>
           </div>
         </section>
+
+        <section class="section contact" id="contact" aria-label="contact">
+          <div class="container">
+            <p class="section-subtitle">Contact Us</p>
+            <h2 class="h2 section-title text-center">Get In Touch</h2>
+            <div class="contact-box">
+              <div class="left-box">
+                <div class="img-box">
+                  <img src="assets/images/about1.jpg" alt="class" />
+                </div>
+              </div>
+              <div class="right-box">
+                <div class="title">
+                  <h1>Feel free to contact us.</h1>
+                </div>
+                <form id="contactForm">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    class="box"
+                    id="nameInputField"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="box"
+                    id="emailInputField"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Contact No (+61)"
+                    class="box"
+                    id="contactInputField"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Age"
+                    class="box"
+                    id="ageInputField"
+                  />
+                  <textarea
+                    name=""
+                    placeholder="Message"
+                    cols="30"
+                    rows="5"
+                    id="messageInputField"
+                  ></textarea>
+                  <div class="error-box hidden" id="errorBox">
+                    <p id="errorText"></p>
+                  </div>
+                  <input type="submit" value="Send Message" class="input-btn" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
 
@@ -682,23 +795,23 @@
             </li>
 
             <li>
-              <a href="#" class="footer-link">Home</a>
+              <a href="#home" class="footer-link">Home</a>
             </li>
 
             <li>
-              <a href="#" class="footer-link">About Us</a>
+              <a href="#about" class="footer-link">About Us</a>
             </li>
 
             <li>
-              <a href="#" class="footer-link">Classes</a>
+              <a href="#class" class="footer-link">Classes</a>
             </li>
 
             <li>
-              <a href="#" class="footer-link">Blog</a>
+              <a href="#blog" class="footer-link">Blog</a>
             </li>
 
             <li>
-              <a href="#" class="footer-link">Contact Us</a>
+              <a href="#contact" class="footer-link">Contact Us</a>
             </li>
           </ul>
 
@@ -803,7 +916,7 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright">
-            &copy; 2023 Fitlife. All Rights Reserved By
+            &copy; 2023 FitnessDiary. All Rights Reserved By
             <a href="#" class="copyright-link">Prakriti Kadel</a>
           </p>
 
@@ -841,6 +954,7 @@
     - custom js link
   -->
     <script src="/assets/js/script.js" defer></script>
+    <script src="/assets/js/contact.js" defer></script>
 
     <!-- 
     - ionicon link
